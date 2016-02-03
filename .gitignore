@@ -1,0 +1,6 @@
+.vagrant/
+.ssh/
+jenkins/jobs/
+downloads/
+centos/install.sh
+ubuntu/install.sh:w
