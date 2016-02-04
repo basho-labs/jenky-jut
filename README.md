@@ -54,6 +54,8 @@ First, there are no rules, just guidance for how to make it.
      well as such variant details for the product.
   * Cache inputs
    * Cache OS packages via vagrant-cachier.
+   * Use the /downloads directory on the vagrant to store downloaded content for
+     reuse across vagrants.
   * Draw modular lines
    * Use artifact boundaries for guidance.
 
@@ -136,3 +138,55 @@ module to be fully capable of being installed can be provided with minimal
 effort by changing the module order within $os/install.sh . Such a feature
 should be included in separating the module listing from the $os/install.sh
 code.
+
+## How to Contribute
+
+* Fork the project on Github. If you have already forked, use `git pull --rebase`
+to reapply your changes on top of the mainline. Example:
+
+```shell
+git checkout master
+git pull --rebase basho master
+```
+
+* Create a topic branch. If you've already created a topic branch, rebase it on
+top of changes from the mainline "master" branch. Examples:
+ * New branch:
+
+```shell
+git checkout -b topic
+```
+
+ * Existing branch:
+
+```shell
+git rebase master
+```
+
+ * Write an RSpec example or set of examples that demonstrate the necessity and
+   validity of your changes. **Patches without specs will most often be ignored.
+   Just do it, you'll thank me later. Documenation patches need no specs, of course.
+
+ * Make your feature addition or bug fix. Make your specs and stories pass (green).
+
+ * Run the suite using multiruby or rvm or rbenv to ensure cross-version
+   compatibility.
+
+ * Cleanup any trailing whitespace in your code and generally follow the coding
+   style of existing code.
+
+ * Send a pull request to the upstream repositoty.
+
+## License & Copyright
+Copyright ©2015-2016 James Gorlick and Basho Technologies, Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+this file except in compliance with the License. You may obtain a copy of the
+License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+CONDITIONS OF ANY KIND, either express or implied. See the License for the
+specific language governing permissions and limitations under the License.
